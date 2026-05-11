@@ -4,7 +4,7 @@
 
 ---
 
-## Day 1 — YYYY-MM-DD
+## Day 1 — 2026-05-06
 
 **Hours worked:** 5
 
@@ -31,7 +31,7 @@
 
 ---
 
-## Day 2 — YYYY-MM-DD
+## Day 2 — 2026-05-07
 
 **Hours worked:** 6
 
@@ -56,7 +56,7 @@
 
 ---
 
-## Day 3 — YYYY-MM-DD
+## Day 3 — 2026-05-08
 
 **Hours worked:** 7
 
@@ -80,7 +80,7 @@
 
 ---
 
-## Day 4 — YYYY-MM-DD
+## Day 4 — 2026-05-09
 
 **Hours worked:** 8
 
@@ -106,7 +106,7 @@
 
 ---
 
-## Day 5 — YYYY-MM-DD
+## Day 5 — 2026-05-10
 
 **Hours worked:** 6
 
@@ -131,7 +131,7 @@
 
 ---
 
-## Day 6 — YYYY-MM-DD
+## Day 6 — 2026-05-11
 
 **Hours worked:** 7
 
@@ -156,7 +156,7 @@
 
 ---
 
-## Day 7 — YYYY-MM-DD
+## Day 7 — 2026-05-12
 
 **Hours worked:** 4
 
