@@ -8,7 +8,7 @@ export default function HomePage() {
       <nav className="border-b border-white/5 backdrop-blur-sm sticky top-0 z-50 bg-slate-950/70">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-teal-500 rounded-lg flex items-center justify-center">
+            <div className="w-7 h-7 bg-teal-500 rounded-lg flex items-center justify-center" aria-hidden="true">
               <TrendingDown className="w-4 h-4 text-white" strokeWidth={2.5} />
             </div>
             <span className="font-semibold text-white">SpendWise</span>
@@ -28,8 +28,8 @@ export default function HomePage() {
       {/* Hero */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 pt-20 pb-16 text-center">
         <div className="inline-flex items-center gap-2 bg-teal-500/10 border border-teal-500/20 rounded-full px-4 py-1.5 mb-8">
-          <span className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-          <span className="text-teal-300 text-sm font-medium">Free • No login • 2 minutes</span>
+          <span className="w-2 h-2 bg-teal-400 rounded-full" aria-hidden="true" />
+          <span className="text-teal-300 text-sm font-medium">Free · No login · 2 minutes</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
@@ -48,16 +48,14 @@ export default function HomePage() {
           className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 active:scale-95 text-white font-semibold text-lg px-8 py-4 rounded-xl transition-all shadow-lg shadow-teal-500/20"
         >
           Audit my AI spend
-          <ArrowRight className="w-5 h-5" />
+          <ArrowRight className="w-5 h-5" aria-hidden="true" />
         </Link>
 
-        <p className="text-slate-500 text-sm mt-4">
-          No credit card. No account. Just answers.
-        </p>
+        <p className="text-slate-500 text-sm mt-4">No credit card. No account. Just answers.</p>
       </section>
 
       {/* Stats */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 pb-16">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 pb-16" aria-label="Key statistics">
         <div className="grid grid-cols-3 gap-4 sm:gap-8">
           {[
             { value: "$340", label: "avg monthly savings found" },
@@ -73,16 +71,18 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 pb-20">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 pb-20" aria-labelledby="how-it-works-heading">
         <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
-          <h2 className="text-white font-semibold text-lg mb-6 text-center">How it works</h2>
+          <h2 id="how-it-works-heading" className="text-white font-semibold text-lg mb-6 text-center">
+            How it works
+          </h2>
           <div className="grid sm:grid-cols-4 gap-6">
             {[
-              { icon: <BarChart3 className="w-5 h-5" />, title: "Enter your tools", desc: "Tell us what you pay for" },
-              { icon: <Zap className="w-5 h-5" />, title: "Instant audit", desc: "Our engine analyzes every plan" },
-              { icon: <TrendingDown className="w-5 h-5" />, title: "See savings", desc: "Per-tool breakdown with reasoning" },
-              { icon: <Shield className="w-5 h-5" />, title: "Share report", desc: "Unique URL, no PII included" },
-            ].map((step, i) => (
+              { icon: <BarChart3 className="w-5 h-5" aria-hidden="true" />, title: "Enter your tools", desc: "Tell us what you pay for" },
+              { icon: <Zap className="w-5 h-5" aria-hidden="true" />, title: "Instant audit", desc: "Our engine analyzes every plan" },
+              { icon: <TrendingDown className="w-5 h-5" aria-hidden="true" />, title: "See savings", desc: "Per-tool breakdown with reasoning" },
+              { icon: <Shield className="w-5 h-5" aria-hidden="true" />, title: "Share report", desc: "Unique URL, no PII included" },
+            ].map((step) => (
               <div key={step.title} className="text-center">
                 <div className="w-10 h-10 bg-teal-500/20 rounded-xl flex items-center justify-center text-teal-400 mx-auto mb-3">
                   {step.icon}
@@ -101,14 +101,12 @@ export default function HomePage() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Find your savings in 2 minutes
           </h2>
-          <p className="text-slate-300 mb-8">
-            The audit is free. The savings are real. No account required.
-          </p>
+          <p className="text-slate-300 mb-8">The audit is free. The savings are real. No account required.</p>
           <Link
             href="/audit"
             className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white font-semibold px-8 py-4 rounded-xl transition-all"
           >
-            Start my free audit <ArrowRight className="w-5 h-5" />
+            Start my free audit <ArrowRight className="w-5 h-5" aria-hidden="true" />
           </Link>
         </div>
       </section>
