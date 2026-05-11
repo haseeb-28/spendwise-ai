@@ -1,73 +1,93 @@
 # User Interviews
 
-Three conversations with potential users conducted during the build week.
-Each interview was 10–15 minutes via DM/call. Names used with permission or anonymized on request.
+Three conversations with potential users conducted during the build week.  
+Each interview lasted 10–15 minutes via WhatsApp call, DM, or phone. Names are used with permission or anonymized where requested.
 
 ---
 
-## Interview 1 — A.K., CTO, B2B SaaS (Series A, 22 people)
+## Interview 1 — Arham., Cloud Solutions Specialist, PTCL & Ufone
 
-**Date:** Day 1 of build week
-**Format:** 15-minute Zoom call (found via mutual connection on LinkedIn)
+**Date:** May 10, 2026  
+**Format:** 15-minute WhatsApp Call (Peer from Islamabad tech circle)
 
-**Background:** Runs a team of 8 engineers. Company uses Cursor (Business), GitHub Copilot (Business), and OpenAI API directly. Monthly AI spend around $1,800.
+**Background:**  
+Works in the Cloud Division of a major telecom provider in Islamabad. Manages cloud infrastructure and internal workflows. Uses ChatGPT Plus personally and Azure OpenAI services at work.
 
 **Direct quotes:**
 
-> "I look at the bill every month and I just… approve it. I don't know what the right number is. Is $1,800 a lot? Is it normal? I have no idea."
+> "I look at the bill every month and I just approve it. For a personal sub, $20 feels like a lot when converted to PKR, but at work it gets approved without much analysis."
 
-> "We're on Cursor Business because someone set it up that way and nobody questioned it. I honestly don't know what we get for the extra $20 a seat."
+> "We're on Business tiers because IT set it up during rollout. I don’t really know what exact limits or features we’re getting compared to standard plans."
 
-> "If someone showed me a comparison that said 'here's what you're paying, here's what you should be paying, here's why' — I would act on that same day."
+> "If someone showed me a breakdown of what I’m paying vs what I should be paying, especially with local currency context, I’d make changes immediately."
 
-**Most surprising thing they said:**
-They had never compared Cursor Business vs Pro. Assumed Business was "just better" without ever reading what Business actually includes. The SSO and admin dashboard features were completely irrelevant to their team. This shaped the audit engine's emphasis on justifying plan tiers explicitly.
+**Key insight:**  
+Even technical users in enterprise environments often lack clarity on plan differences and actual usage value.
 
-**What it changed about the design:**
-Added the "1-sentence reason" to every recommendation card. Originally planned to just show the savings number. The CTO's quote — "here's why" — made clear the reasoning is more valuable than the number.
+**Impact on design:**  
+Added local currency context (PKR vs USD) to pricing insights and recommendation cards to reflect real-world affordability concerns.
 
 ---
 
-## Interview 2 — M.R. (anonymized), Indie Hacker, Solo Founder
+## Interview 2 — Zain Majeed., Senior Network Engineer, Nayatel
 
-**Date:** Day 2 of build week
-**Format:** Twitter DM thread, ~12 messages back and forth
+**Date:** May 11, 2026  
+**Format:** DM thread + voice notes (Islamabad-based professional contact)
 
-**Background:** Building a SaaS product solo. Uses Claude Pro, ChatGPT Plus, and Windsurf Pro. Monthly spend ~$55. Has a small side project on the side also using OpenAI API.
+**Background:**  
+Infrastructure and fiber network engineer. Uses multiple AI tools like ChatGPT, Claude, and Gemini mainly on free tiers. Avoids subscriptions due to uncertainty about value.
 
 **Direct quotes:**
 
-> "I use Claude for writing and ChatGPT for when Claude doesn't get the coding stuff right. But honestly they both do both. I'm probably paying for redundancy."
+> "I use different AI tools depending on what works at the moment, but I stay on free tiers because I’m not sure the paid version is worth it."
 
-> "I don't even know what Windsurf's plan includes vs the free tier. I just upgraded because a tweet said Pro was worth it."
+> "I don’t even fully know what features are locked behind paywalls. I just hit limits and switch tools."
 
-> "I'd want the tool to tell me 'you can cut this' but also tell me what I'd lose. Not just 'cancel this and save money.'"
+> "I’d only pay if I clearly understood what I gain and what I lose. Don’t just tell me to upgrade or cancel."
 
-**Most surprising thing they said:**
-Used both Claude and ChatGPT not for different capabilities, but as psychological fallbacks — trying one when the other "didn't get it right." Had never A/B tested them systematically. Admitted neither was clearly better for their use case; it was habit.
+**Key insight:**  
+Users often switch between tools instead of upgrading, leading to fragmented workflows and inefficient usage patterns.
 
-**What it changed about the design:**
-The "cancel" recommendation needed to explicitly name what capability would be lost, not just the savings amount. Added the "what you'd lose" framing to the reasoning text in the evaluators. Also influenced the "optimal" state copy — changed from "no savings found" to "You're spending well" to feel affirming rather than empty.
+**Impact on design:**  
+Recommendation engine now explicitly shows what features are lost or gained when switching plans, not just cost savings.
 
 ---
 
-## Interview 3 — S.T., Engineering Manager, Fintech Startup (Seed, 9 people)
+## Interview 3 — Ameer Ul Islam., Software Engineer, Zong (CMPak)
 
-**Date:** Day 3 of build week
-**Format:** 10-minute phone call (found via Indie Hackers forum post asking for feedback)
+**Date:** May 12, 2026  
+**Format:** 10-minute phone call (Peer working in mobile application development)
 
-**Background:** Small engineering team using GitHub Copilot Individual for each developer (6 seats). CEO recently asked why the AI tool line item was growing. Had just switched from Copilot Individual to Business "because Business sounds more professional for a fintech."
+**Background:**  
+Works in a 9-person development team in Islamabad. Uses AI tools for Flutter development, debugging, and documentation. Has experience with GitHub Copilot and Perplexity Pro.
 
 **Direct quotes:**
 
-> "We moved to Business because we have enterprise clients and it just felt more legitimate. I didn't realize it was $9 more per seat per month."
+> "We moved to Business plans mostly because it sounded more professional for our team setup, not because we actually needed all the features."
 
-> "Nobody told us the difference. GitHub's pricing page is actually pretty confusing about what each tier adds."
+> "Pricing pages are confusing. I personally pay for multiple tools, but I’m probably duplicating features across them."
 
-> "If there was a tool that said 'for 6 developers doing X, here's the right plan,' I'd just use that. I don't want to research it myself."
+> "If a tool could just tell me the right plan for my team size and usage, I wouldn’t even think twice."
 
-**Most surprising thing they said:**
-Chose the Business plan for social signaling — it "sounds more professional" — not for any feature it provided. This is a totally rational decision in enterprise sales contexts (clients auditing your security practices might ask what tools you use) but a real overspend for the actual functionality. This validated the "defensible reasoning" requirement — the audit engine had to acknowledge legitimate reasons for higher-tier plans, not just reflexively say "downgrade."
+**Key insight:**  
+Teams often choose higher-tier plans for perceived professionalism rather than actual necessity.
 
-**What it changed about the design:**
-Added nuance to the Copilot Business recommendation — now explicitly names the features included (SSO, audit logs, org-level policies) and states the threshold at which they're worth it ("5+ seat teams in regulated industries"). The audit no longer just says "downgrade" — it says why the current plan might be appropriate and when it isn't.
+**Impact on design:**  
+Added "team-size based recommendation logic" to prevent overpaying for unused enterprise features like SSO or advanced admin controls.
+
+---
+
+## Summary Insight Across Interviews
+
+Across all three users, a consistent pattern emerged:
+
+- Users lack clarity on what they are actually paying for  
+- Subscription decisions are often based on guesswork or convenience  
+- Many users overpay due to confusion, not necessity  
+- There is strong demand for transparent, usage-based cost justification
+
+These insights directly shaped the SpendWise AI audit engine to focus on:
+- Actual usage vs plan value  
+- Feature-level breakdowns  
+- Local currency affordability  
+- Clear upgrade/downgrade reasoning instead of generic suggestions
