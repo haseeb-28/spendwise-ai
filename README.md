@@ -50,7 +50,7 @@ SpendWise audits your Cursor, GitHub Copilot, Claude, ChatGPT, and more — and 
 ![Get Report By Email](screenshots/get_report_by_email.png)
 
 ### Lighthouse mobile scores 
-![Get Report By Email](screenshots/lighthouse_mobile_scores.png)
+![Lighthouse mobile scores](screenshots/lighthouse_mobile_scores.png)
 
 ---
 
