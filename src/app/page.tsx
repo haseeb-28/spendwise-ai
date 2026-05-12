@@ -14,7 +14,6 @@ export default function HomePage() {
             <span className="font-semibold text-white">SpendWise</span>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-xs text-slate-400 hidden sm:block">by Credex</span>
             <Link
               href="/audit"
               className="bg-teal-500 hover:bg-teal-400 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
