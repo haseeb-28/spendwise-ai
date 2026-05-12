@@ -287,4 +287,5 @@ Audit results are saved to both `sessionStorage` and `localStorage` after runnin
 
 **SpendWise** · Free AI spend optimization · Built for [Credex](https://credex.rocks)
 
+Developed by **Haseeb Ur Rehman** as part of the Credex Web Dev Intern Assignment
 </div>
